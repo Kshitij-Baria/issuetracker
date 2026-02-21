@@ -22,11 +22,11 @@ public class Activity {
     private Task task;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "field_type")
+    @Column(name = "field_type", nullable = false)
     private ActivityFieldType fieldType;
 
     @Column(name = "old_value")
