@@ -27,7 +27,7 @@ public class Activity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "field_type", nullable = false)
-    private ActivityFieldType fieldType;
+    private ActivityFieldType activityFieldType;
 
     @Column(name = "old_value")
     private String oldValue;
