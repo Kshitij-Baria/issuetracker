@@ -8,7 +8,9 @@ import com.example.issuetracker.model.dto.request.CreateActivityRequest;
 import com.example.issuetracker.model.dto.response.ActivityResponse;
 import com.example.issuetracker.model.dto.response.TaskResponse;
 import com.example.issuetracker.model.dto.response.UserResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ActivityMapper {
     public Activity mapToEntity(CreateActivityRequest createActivityRequest, Task task, User user) {
         Activity activity = new Activity();

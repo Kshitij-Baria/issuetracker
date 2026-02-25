@@ -5,9 +5,11 @@ import com.example.issuetracker.model.dto.request.CreateTaskRequest;
 import com.example.issuetracker.model.dto.request.UpdateTaskRequest;
 import com.example.issuetracker.model.dto.response.*;
 
+import org.springframework.stereotype.Component;
 import java.time.Instant;
 import java.util.Set;
 
+@Component
 public class TaskMapper {
     public Task mapToEntity(CreateTaskRequest createTaskRequest, User createdBy, User assignedTo, Task parentTask, Set<Task> subTasks, Set<User> watchers, Set<Label> labels) {
         Task task = new Task();
