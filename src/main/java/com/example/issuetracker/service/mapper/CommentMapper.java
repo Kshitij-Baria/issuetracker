@@ -8,9 +8,11 @@ import com.example.issuetracker.model.dto.request.UpdateCommentRequest;
 import com.example.issuetracker.model.dto.response.CommentResponse;
 import com.example.issuetracker.model.dto.response.TaskResponse;
 import com.example.issuetracker.model.dto.response.UserResponse;
+import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 
+@Component
 public class CommentMapper {
     public Comment mapToEntity(CreateCommentRequest createCommentRequest, Task task, User author) {
         Comment comment = new Comment();

@@ -6,8 +6,10 @@ import com.example.issuetracker.model.dto.request.UpdateLabelRequest;
 import com.example.issuetracker.model.dto.response.LabelResponse;
 import com.example.issuetracker.model.dto.response.TaskResponse;
 
+import org.springframework.stereotype.Component;
 import java.util.Set;
 
+@Component
 public class LabelMapper {
     public Label mapToEntity(CreateLabelRequest createLabelRequest) {
         Label label = new Label();
