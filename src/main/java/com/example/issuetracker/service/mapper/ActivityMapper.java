@@ -30,7 +30,7 @@ public class ActivityMapper {
         return activity;
     }
 
-    public ActivityResponse mapToResponse(Activity activity, TaskReferenceResponse taskResponse, UserResponse userResponse) {
+    public ActivityResponse mapToResponse(Activity activity, TaskReferenceResponse taskReferenceResponse, UserResponse userResponse) {
         ActivityResponse activityResponse = new ActivityResponse();
 
         Long id = activity.getId();
@@ -40,7 +40,7 @@ public class ActivityMapper {
         Long targetId = activity.getTargetId();
 
         activityResponse.setId(id);
-        activityResponse.setTask(taskResponse);
+        activityResponse.setTask(taskReferenceResponse);
         activityResponse.setUser(userResponse);
         activityResponse.setActivityFieldType(activityFieldType);
         activityResponse.setOldValue(oldValue);

@@ -44,7 +44,7 @@ public class CommentMapper {
         return comment;
     }
 
-    public CommentResponse mapToResponse(Comment comment, TaskReferenceResponse taskResponse, UserResponse userResponse) {
+    public CommentResponse mapToResponse(Comment comment, TaskReferenceResponse taskReferenceResponse, UserResponse userResponse) {
         CommentResponse commentResponse = new CommentResponse();
 
         Long id = comment.getId();
@@ -53,7 +53,7 @@ public class CommentMapper {
         Instant updatedAt = comment.getUpdatedAt();
 
         commentResponse.setId(id);
-        commentResponse.setTask(taskResponse);
+        commentResponse.setTask(taskReferenceResponse);
         commentResponse.setAuthor(userResponse);
         commentResponse.setContent(content);
         commentResponse.setCreatedAt(createdAt);
