@@ -9,7 +9,7 @@ import java.time.Instant;
 @Setter
 public class CommentResponse {
     private Long id;
-    private TaskResponse task;
+    private TaskReferenceResponse task;
     private UserResponse author;
     private String content;
     private Instant createdAt;

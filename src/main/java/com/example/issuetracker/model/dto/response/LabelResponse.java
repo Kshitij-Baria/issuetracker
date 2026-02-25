@@ -10,5 +10,5 @@ import java.util.Set;
 public class LabelResponse {
     private Long id;
     private String labelText;
-    private Set<TaskResponse> tasks;
+    private Set<TaskReferenceResponse> tasks;
 }

@@ -6,9 +6,11 @@ import com.example.issuetracker.model.Task;
 import com.example.issuetracker.model.User;
 import com.example.issuetracker.model.dto.request.CreateActivityRequest;
 import com.example.issuetracker.model.dto.response.ActivityResponse;
-import com.example.issuetracker.model.dto.response.TaskResponse;
+import com.example.issuetracker.model.dto.response.TaskReferenceResponse;
 import com.example.issuetracker.model.dto.response.UserResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ActivityMapper {
     public Activity mapToEntity(CreateActivityRequest createActivityRequest, Task task, User user) {
         Activity activity = new Activity();
@@ -28,7 +30,7 @@ public class ActivityMapper {
         return activity;
     }
 
-    public ActivityResponse mapToResponse(Activity activity, TaskResponse taskResponse, UserResponse userResponse) {
+    public ActivityResponse mapToResponse(Activity activity, TaskReferenceResponse taskResponse, UserResponse userResponse) {
         ActivityResponse activityResponse = new ActivityResponse();
 
         Long id = activity.getId();
