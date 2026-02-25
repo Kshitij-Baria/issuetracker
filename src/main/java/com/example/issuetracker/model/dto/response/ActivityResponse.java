@@ -10,7 +10,7 @@ import java.time.Instant;
 @Setter
 public class ActivityResponse {
     private Long id;
-    private TaskResponse task;
+    private TaskReferenceResponse task;
     private UserResponse user;
     private ActivityFieldType activityFieldType;
     private String oldValue;

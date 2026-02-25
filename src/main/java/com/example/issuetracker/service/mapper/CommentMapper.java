@@ -6,7 +6,7 @@ import com.example.issuetracker.model.User;
 import com.example.issuetracker.model.dto.request.CreateCommentRequest;
 import com.example.issuetracker.model.dto.request.UpdateCommentRequest;
 import com.example.issuetracker.model.dto.response.CommentResponse;
-import com.example.issuetracker.model.dto.response.TaskResponse;
+import com.example.issuetracker.model.dto.response.TaskReferenceResponse;
 import com.example.issuetracker.model.dto.response.UserResponse;
 import org.springframework.stereotype.Component;
 
@@ -44,7 +44,7 @@ public class CommentMapper {
         return comment;
     }
 
-    public CommentResponse mapToResponse(Comment comment, TaskResponse taskResponse, UserResponse userResponse) {
+    public CommentResponse mapToResponse(Comment comment, TaskReferenceResponse taskResponse, UserResponse userResponse) {
         CommentResponse commentResponse = new CommentResponse();
 
         Long id = comment.getId();

@@ -4,7 +4,7 @@ import com.example.issuetracker.model.Label;
 import com.example.issuetracker.model.dto.request.CreateLabelRequest;
 import com.example.issuetracker.model.dto.request.UpdateLabelRequest;
 import com.example.issuetracker.model.dto.response.LabelResponse;
-import com.example.issuetracker.model.dto.response.TaskResponse;
+import com.example.issuetracker.model.dto.response.TaskReferenceResponse;
 
 import org.springframework.stereotype.Component;
 import java.util.Set;
@@ -39,7 +39,7 @@ public class LabelMapper {
         return label;
     }
 
-    public LabelResponse mapToResponse(Label label, Set<TaskResponse> tasks) {
+    public LabelResponse mapToResponse(Label label, Set<TaskReferenceResponse> tasks) {
         LabelResponse labelResponse = new LabelResponse();
 
         String labelText = label.getLabelText();

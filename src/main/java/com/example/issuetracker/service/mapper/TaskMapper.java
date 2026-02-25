@@ -88,7 +88,20 @@ public class TaskMapper {
         return task;
     }
 
-    public TaskResponse mapToResponse(Task task, UserResponse createdBy, UserResponse assignedTo, TaskResponse parentTask, Set<TaskResponse> subTasks, Set<UserResponse> watchers, Set<LabelResponse> labels, Set<CommentResponse> comments, Set<ActivityResponse> activities) {
+
+    public TaskReferenceResponse mapToReferenceResponse(Task task) {
+        TaskReferenceResponse taskReferenceResponse = new TaskReferenceResponse();
+
+        taskReferenceResponse.setId(task.getId());
+        taskReferenceResponse.setTaskType(task.getTaskType());
+        taskReferenceResponse.setTaskSummary(task.getTaskSummary());
+        taskReferenceResponse.setTaskPriority(task.getTaskPriority());
+        taskReferenceResponse.setTaskStatus(task.getTaskStatus());
+
+        return taskReferenceResponse;
+    }
+
+    public TaskResponse mapToResponse(Task task, UserResponse createdBy, UserResponse assignedTo, TaskReferenceResponse parentTask, Set<TaskReferenceResponse> subTasks, Set<UserResponse> watchers, Set<LabelResponse> labels, Set<CommentResponse> comments, Set<ActivityResponse> activities) {
         TaskResponse taskResponse = new TaskResponse();
 
         Long id = task.getId();

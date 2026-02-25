@@ -20,8 +20,8 @@ public class TaskResponse {
     private TaskStatus taskStatus;
     private UserResponse createdBy;
     private UserResponse assignedTo;
-    private TaskResponse parentTask;
-    private Set<TaskResponse> subTasks;
+    private TaskReferenceResponse parentTask;
+    private Set<TaskReferenceResponse> subTasks;
     private Set<UserResponse> watchers;
     private Set<LabelResponse> labels;
     private Set<CommentResponse> comments;
